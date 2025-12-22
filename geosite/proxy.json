@@ -2,8 +2,6 @@
   "version": 2,
   "rules": [
     {
-      "domain": [
-      ],
       "domain_suffix": [
         "atl-paas.net",
         "atlassian.com",
@@ -43,8 +41,6 @@
         "giphy.com",
         "intercomcdn.com",
         "intercom.io"
-      ],
-      "domain_keyword": [
       ]
     }
   ]
