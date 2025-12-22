@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain": [
+      ],
+      "domain_suffix": [
+        "atl-paas.net",
+        "atlassian.com",
+        "ss-inf.net",
+        "atlassian.net",
+        "jira.com",
+        "bitbucket.org",
+        "cdn.prod.atlassian-dev.net",
+        "atlassian-us-gov-mod.com",
+        "atlassian-us-gov-mod.net",
+        "cdn.atlassian-us-gov-mod.com",
+        "cdn.prod.atlassian-dev-us-gov-mod.net",
+        "cloudfront.net",
+        "awswaf.com",
+        "cookielaw.org",
+        "recaptcha.net",
+        "gstatic.com",
+        "gstatic.cn",
+        "launchdarkly.com",
+        "optimizely.com",
+        "atl.orangelogic.com",
+        "data.pendo.io",
+        "pndsn.com",
+        "sentry-cdn.com",
+        "ingest.sentry.io",
+        "slack-edge.com",
+        "api.statsig.com",
+        "statsigapi.net",
+        "events.statsigapi.net",
+        "prodregistryv2.org",
+        "featureassets.org",
+        "segment.io",
+        "cdn.segment.com",
+        "images.unsplash.com",
+        "wp.com",
+        "gravatar.com",
+        "giphy.com",
+        "intercomcdn.com",
+        "intercom.io"
+      ],
+      "domain_keyword": [
+      ]
+    }
+  ]
+}
