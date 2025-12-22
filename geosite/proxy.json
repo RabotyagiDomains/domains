@@ -41,6 +41,38 @@
         "giphy.com",
         "intercomcdn.com",
         "intercom.io"
+      ],
+      "domain_keyword": [
+        ".pinterest.",
+        "1e100",
+        "abema",
+        "appledaily",
+        "avtb",
+        "beetalk",
+        "dlercloud",
+        "dropbox",
+        "facebook",
+        "fbcdn",
+        "instagram",
+        "paypal",
+        "porn",
+        "sci-hub",
+        "spotify",
+        "telegram",
+        "ttvnw",
+        "twitter",
+        "uk-live",
+        "whatsapp",
+        "appspot",
+        "blogspot",
+        "gmail",
+        "google",
+        "recaptcha",
+        "github",
+        "apiproxy-device-prod-nlb-",
+        "dualstack.apiproxy-",
+        "dualstack.ichnaea-web-",
+        "netflixdnstest"
       ]
     }
   ]
