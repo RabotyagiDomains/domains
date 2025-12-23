@@ -39,3 +39,37 @@ intercom.io
 // Slack
 slack-edge.com
 slack.com
+
+// Supercell / Игры
+supercell.com
+windsurf.com
+brawlstarsgame.com
+clashofclans.com
+
+// Minecraft / Microsoft / Xbox
+minecraft.net
+microsoftonline.com
+mojang.com
+xboxlive.com
+
+// Anthropic / AI
+anthropic.com
+claude.ai
+
+// Codeium / Dev Tools
+codeium.com
+
+// Miro
+miro.com
+
+// NVIDIA / GeForce
+nvidia.com
+geforce.com
+nvidia.cn
+
+// JetBrains / Dev Tools
+jetbrains.com
+
+// Безопасность / Анализ
+virustotal.com
+online-fix.me
