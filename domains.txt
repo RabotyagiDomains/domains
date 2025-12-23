@@ -21,7 +21,6 @@ data.pendo.io
 pndsn.com
 sentry-cdn.com
 ingest.sentry.io
-slack-edge.com
 api.statsig.com
 statsigapi.net
 statsigapi.net
