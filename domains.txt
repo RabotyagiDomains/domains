@@ -72,9 +72,13 @@ jetbrains.com
 // Безопасность / Анализ
 virustotal.com
 online-fix.me
+<<<<<<< HEAD
 
 // LSports
 lsports.eu
 
 // Api Sports
 api-sports.io
+=======
+gitlab.com
+>>>>>>> 625a1b4 (gitlab)
