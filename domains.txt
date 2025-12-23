@@ -81,3 +81,6 @@ api-sports.io
 
 // Gitlab
 gitlab.com
+
+// Derpfest
+derpfest.org
