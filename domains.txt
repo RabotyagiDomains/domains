@@ -72,3 +72,9 @@ jetbrains.com
 // Безопасность / Анализ
 virustotal.com
 online-fix.me
+
+// LSports
+lsports.eu
+
+// Api Sports
+api-sports.io
