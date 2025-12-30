@@ -1,9 +1,8 @@
-import os
 import json
 import subprocess
 
 
-def generate_srs_domains(domains: list[str]) -> bytes:
+def generate_srs_domains(domains: list[str]):
     data = {"version": 3, "rules": [{"domain_suffix": domains}]}
     srs_file_path = "domains.srs"
     json_file_path = "domains.json"
@@ -23,7 +22,7 @@ def generate_srs_domains(domains: list[str]) -> bytes:
 
 def main():
     domains = []
-    with open("domains.txt") as f:
+    with open("domains.lst") as f:
         for line in f.readlines():
             domain = line.strip()
             if domain and domain[0] not in ["/", "#"]:
