@@ -1,15 +1,16 @@
-# Makefile
-
 DOMAINS_FILE = domains.txt
-GIT_MSG = "update"
-EDITOR ?= nano  # Можно заменить на vim, code, или любой другой
+GIT_MSG ?= update
+EDITOR ?= nano
 
 .PHONY: edit push
 
-# Обновление репозитория и открытие редактора
+push:
+	python convert.py
+	git add .
+	git commit -m "$(GIT_MSG)" || true
+	git push
+
 edit:
 	git pull
 	$(EDITOR) $(DOMAINS_FILE)
-	git add $(DOMAINS_FILE)
-	git commit -m "$(GIT_MSG)"
-	git push
+	$(MAKE) push
