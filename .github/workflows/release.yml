@@ -36,8 +36,6 @@ jobs:
         env:
           PATH: ${{ github.workspace }}/bin:${{ env.PATH }}
         run: |
-          which sing-box
-          sing-box version
           python convert.py
           test -f domains.srs
 
