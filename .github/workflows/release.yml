@@ -23,15 +23,23 @@ jobs:
 
       - name: Download sing-box
         run: |
+          VERSION=1.12.0
           mkdir -p bin
-          curl -L https://github.com/SagerNet/sing-box/releases/latest/download/sing-box-linux-amd64.tar.gz \
-            | tar -xz
-          mv sing-box-*/sing-box bin/sing-box
+          curl -fL \
+            https://github.com/SagerNet/sing-box/releases/download/v${VERSION}/sing-box-${VERSION}-linux-amd64.tar.gz \
+            -o sing-box.tar.gz
+          tar -xzf sing-box.tar.gz
+          mv sing-box-${VERSION}-linux-amd64/sing-box bin/sing-box
           chmod +x bin/sing-box
 
-      - name: Run convert.py
+      - name: Run convert.py (with sing-box)
+        env:
+          PATH: ${{ github.workspace }}/bin:${{ env.PATH }}
         run: |
+          which sing-box
+          sing-box version
           python convert.py
+          test -f domains.srs
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
