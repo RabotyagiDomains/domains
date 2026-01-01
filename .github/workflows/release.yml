@@ -1,0 +1,42 @@
+name: Build domains.srs and release
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Download sing-box
+        run: |
+          mkdir -p bin
+          curl -L https://github.com/SagerNet/sing-box/releases/latest/download/sing-box-linux-amd64.tar.gz \
+            | tar -xz
+          mv sing-box-*/sing-box bin/sing-box
+          chmod +x bin/sing-box
+
+      - name: Run convert.py
+        run: |
+          python convert.py
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: auto-${{ github.run_number }}
+          name: "Auto release #${{ github.run_number }}"
+          files: |
+            domains.srs
