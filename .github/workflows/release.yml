@@ -11,7 +11,9 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env:
+      RELEASE_DATE: ""
+    
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -39,10 +41,14 @@ jobs:
           python convert.py
           test -f domains.srs
 
+      - name: Set release date (MSK)
+        run: |
+          echo "RELEASE_DATE=$(TZ=Europe/Moscow date '+%d %B %Y, %H:%M')" >> $GITHUB_ENV
+
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: auto-${{ github.run_number }}
-          name: "Auto release #${{ github.run_number }}"
+          name: "Release ${{ env.RELEASE_DATE }}"
           files: |
             domains.srs
